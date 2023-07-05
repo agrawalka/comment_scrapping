@@ -21,7 +21,7 @@ def scrapping():
     api_service_name = "youtube"
     api_version = "v3"
     
-    DEVELOPER_KEY = "AIzaSyBFxlEyVp1eJQtZkbF4iV621aspNp248SE"
+    DEVELOPER_KEY = "API KEY"
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=DEVELOPER_KEY)
     # Function to extract video ID from the URL
