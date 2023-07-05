@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comment Scraper - Result</title>
+    <style>
+        .positive-comments {
+            flex: 1;
+            color: green;
+        }
+
+        .neutral-comments {
+            flex:1;
+            color: grey;
+        }
+        .negative-comments {
+            flex: 1;
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>YouTube video comment analysis </h2>
+    {{title}}
+    <div class="container">
+        <div class="positive-comments">
+            <h2>Positive Comments:</h2>
+            <ul class="positive-comments">
+                {% for comment in positive %}
+                <li>{{ comment }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="neutral-comments">
+            <h2>Neutral Comments:</h2>
+            <ul class="neutral-comments">
+                {% for comment in neutral %}
+                <li>{{ comment }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="negative-comments">
+            <h2>Negative Comments:</h2>
+            <ul class="negative-comments">
+                {% for comment in negative %}
+                <li>{{ comment }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</html>
